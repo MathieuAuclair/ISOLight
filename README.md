@@ -1,4 +1,4 @@
-## ISOLight Hardware
+# ISOLight Hardware
 collection charleen's projects
 
 ### TODO
@@ -12,12 +12,12 @@ collection charleen's projects
 #### Bluetooth Scheme
 ![GitHub Logo](http://static.thegeekstuff.com/wp-content/uploads/2014/07/ti-ble-profile.png)
 
-###General Documentation 
+### General Documentation 
 #### rgb service (write)
 this service is used to send data to phone device by using BLEDevice object Id
 #### UUID (read) socketID integer
 unique ID to let the phone identify the bluetooth device
-####BLEDevice ble device (phone)
+#### BLEDevice ble device (phone)
 this is the object that contain all the information from the phone device
-####PwmOut pin board LED
+#### PwmOut pin board LED
 this object is used to define pin on the motherboard
