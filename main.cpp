@@ -189,12 +189,13 @@ void writeCharCallback(const GattWriteCallbackParams *params){
                 r = 0/255.0f;
                 g = 0/255.0f;
                 b = 0/255.0f;
+		//create a log over here sigh!
             }
       }           
 }
 
 
-void bleInitComplete(BLE::InitializationCompleteCallbackContext *params)
+void bleInitComplete(BLE::InitializationCompleteCallbackContext *params)//init connection with phone
 {
     BLE &ble          = params->ble;
     ble_error_t error = params->error;
@@ -207,10 +208,11 @@ void bleInitComplete(BLE::InitializationCompleteCallbackContext *params)
 
     ble.init();
     ble.gap().onDisconnection(disconnectionCallback);
-    ble.gattServer().onDataWritten(writeCharCallback);
+    ble.gattServer().onDataWritten(writeCharCallback); //connection recived for DATAAAA lol!
 
     /* Setup advertising */
     ble.gap().accumulateAdvertisingPayload(GapAdvertisingData::BREDR_NOT_SUPPORTED | GapAdvertisingData::LE_GENERAL_DISCOVERABLE); // BLE only, no classic BT
+    // -------------------------------------- here's a fucken problem...
     ble.gap().setAdvertisingType(GapAdvertisingParams::ADV_CONNECTABLE_DIRECTED); // advertising type
     ble.gap().accumulateAdvertisingPayload(GapAdvertisingData::COMPLETE_LOCAL_NAME, (uint8_t *)DEVICE_NAME, sizeof(DEVICE_NAME)); 
     ble.gap().setAdvertisingInterval(0); 
@@ -224,7 +226,6 @@ void bleInitComplete(BLE::InitializationCompleteCallbackContext *params)
 }    
 int main(void)
 {
-    
     BLE& ble = BLE::Instance(BLE::DEFAULT_INSTANCE);
     ble.init(bleInitComplete);
     
