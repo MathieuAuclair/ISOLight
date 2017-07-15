@@ -13,6 +13,9 @@ collection charleen's projects
 ![GitHub Logo](http://static.thegeekstuff.com/wp-content/uploads/2014/07/ti-ble-profile.png)
 
 ### General Documentation 
+#### Online doc for mbed
+https://docs.mbed.com/docs/ble-intros/en/latest/
+
 #### rgb service (write)
 this service is used to send data to phone device by using BLEDevice object Id
 #### UUID (read) socketID integer
@@ -21,3 +24,11 @@ unique ID to let the phone identify the bluetooth device
 this is the object that contain all the information from the phone device
 #### PwmOut pin board LED
 this object is used to define pin on the motherboard
+
+
+### Compiler for linux
+here's the documentation for terminal compiler (ARM architecture)
+#### Installation
+https://docs.mbed.com/docs/mbed-os-handbook/en/latest/dev_tools/cli/
+#### Usage
+https://docs.mbed.com/docs/mbed-os-handbook/en/latest/dev_tools/third_party/
