@@ -16,14 +16,6 @@ collection charleen's projects
 #### Online doc for mbed
 https://docs.mbed.com/docs/ble-intros/en/latest/
 
-#### rgb service (write)
-this service is used to send data to phone device by using BLEDevice object Id
-#### UUID (read) socketID integer
-unique ID to let the phone identify the bluetooth device
-#### BLEDevice ble device (phone)
-this is the object that contain all the information from the phone device
-#### PwmOut pin board LED
-this object is used to define pin on the motherboard
 
 
 ### Compiler for linux
